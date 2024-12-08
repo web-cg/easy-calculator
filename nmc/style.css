@@ -1,0 +1,108 @@
+/* Grundlegendes Layout und Design */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Calculator Container */
+.calculator {
+    background-color: #333;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    width: 340px;
+}
+
+/* Display */
+.display-container {
+    text-align: right;
+}
+
+.display {
+    width: 100%;
+    height: 50px;
+    font-size: 32px;
+    padding: 10px;
+    background-color: #111;
+    color: #fff;
+    border: 2px solid #444;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    word-wrap: break-word;
+}
+
+/* Buttons Layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 15px;
+}
+
+/* Buttons Styling */
+button {
+    background-color: #444;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 24px;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #555;
+    transform: translateY(-5px);
+}
+
+button:active {
+    background-color: #666;
+    transform: translateY(0);
+}
+
+/* Operator Buttons */
+.operator {
+    background-color: #e06c75;
+}
+
+.operator:hover {
+    background-color: #d65f5b;
+}
+
+/* Clear & Delete Buttons */
+button:nth-child(19), button:nth-child(20) {
+    background-color: #61afef;
+}
+
+button:nth-child(19):hover, button:nth-child(20):hover {
+    background-color: #4fa3d1;
+}
+
+/* Theme customization: Light/Dark mode */
+body.light-mode {
+    background-color: #fff;
+}
+
+body.light-mode .calculator {
+    background-color: #f9f9f9;
+}
+
+body.light-mode .display {
+    background-color: #ddd;
+    color: #000;
+}
+
+body.light-mode button {
+    background-color: #ddd;
+    color: #000;
+}
+
+body.light-mode button:hover {
+    background-color: #ccc;
+}
